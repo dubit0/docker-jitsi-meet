@@ -8,7 +8,7 @@
 {{ $XMPP_AUTH_DOMAIN := .Env.XMPP_AUTH_DOMAIN -}}
 {{ $XMPP_DOMAIN := .Env.XMPP_DOMAIN -}}
 {{ $XMPP_MUC_DOMAIN := .Env.XMPP_MUC_DOMAIN -}}
-{{ $XMPP_MUC_DOMAIN_PREFIX := (split "." .Env.XMPP_MUC_DOMAIN)._0  -}}
+{{ $XMPP_MUC_DOMAIN_PREFIX := .Env.XMPP_MUC_DOMAIN_PREFIX -}}
 
 // Begin default config overrides.
 
