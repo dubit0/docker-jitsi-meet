@@ -45,8 +45,6 @@ RUN \
     && apt-cleanup \
     && rm -rf /tmp/pkg /var/cache/apt
 
-RUN patch -d /usr/lib/prosody/modules/muc -p0 < /prosody-plugins/muc_owner_allow_kick.patch
-
 COPY rootfs/ /
 
 COPY --from=builder /usr/local/lib/lua /usr/local/lib/lua
