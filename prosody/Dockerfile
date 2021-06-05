@@ -15,7 +15,7 @@ RUN \
       gcc \
     && luarocks install cyrussasl 1.1.0-1 \
     && luarocks install net-url 0.9-1 \
-    && luarocks install luajwtjitsi 2.0-0
+    && luarocks install luajwtjitsi 2.0-0 CRYPTO_LIBDIR=/usr/lib/aarch64-linux-gnu OPENSSL_LIBDIR=/usr/lib/aarch64-linux-gnu
 
 FROM ${JITSI_REPO}/base:${BASE_TAG}
 
